@@ -1,0 +1,3 @@
+# Aprendizados da semana
+
+Nesta semana na **Labenu**, aprofundei meus conhecimentos em terminal, git e gitHub. Na aula de terminal aprendi vários comandos que serão bastante úteis durante todo o curso. Na aula de git, aprendi a diferença entre git e gitHub onde git é um repositório local em que todas as versões ficam armazenadas somente em meu computador, o que pode ser um problema pois posso perder tudo caso meu computador dê um problema, mas daí posso enviar tudo pro gitHub que é um repositório remoto que me permite trabalhar no meu projeto de qualquer computador e em qualquer lugar e com diversas pessoas ao mesmo tempo.
