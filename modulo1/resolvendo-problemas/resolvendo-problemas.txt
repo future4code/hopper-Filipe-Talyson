@@ -1,0 +1,18 @@
+7 Passos para resolver problemas na programação
+
+O primeiro passo é 'Ter atenção no enunciado', isso significa que temos que propor fazer somente o que for solicitado pra não fazermos coisas desnecessárias. Pra isso é essencial ler com atenção o enunciado, entender o que o código deve fazer e identificar informações únicas
+
+O segundo passo é 'Retirar Informações Relevantes', isso significa que de tudo que foi passado, seja no enunciado, ou seja no pedido de um cliente, devemos separar as palavras chaves podendo utiliza-las como variáveis e definir as informações relevantes.
+
+O terceiro passo é 'Pensar nas Entradas e Saídas'. Podemos encarar como entradas os dados recebidos. E as saídas podem ser consideradas as possíveis respostas. Sendo assim podemos criar uma função contendo as estradas através dos parâmetros e as saídas através da palavra-chave return.
+
+O quarto passo é 'Fazer um esquema Visual'. Isso significa que podemos criar exemplos, montar diagramas com a lógica do código e pensar nos possíveis cenários.
+
+O quinto passo é 'Criar Um código Feio'. Esse passo é prático, onde vamos criar um código pensando em todas possíveis soluções. Em seguida é importante testar cada solução.
+
+O sexto passo é Testar: Força-Bruta. Esse passo vamos testar nosso código para ver se tudo funciona corretamente.
+
+O sétimo e ultimo passo é 'Refatorar'. É onde vamos aprimorar nosso código buscando soluções para simplificar o mesmo ou tornando o mais legível possível.
+
+
+Esses passos são fundamentais para solucionar problemas pois nos força a ir pelo caminho correto evitando encontrar erros no final do nosso desenvolvendo fazendo talvez refazer algum código.
