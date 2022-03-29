@@ -69,6 +69,7 @@ div img {
 #container-de-descricao {
     background-color: #2274a5;
     color: white;
+    padding-top: 30px;
 }
 
 #container-de-descricao>ol {
@@ -81,7 +82,6 @@ div img {
 
 #container-para-comprar>p {
     color: #c44f00;
-    background-color: red;
     padding: 100px 0;
     font-size: 60px;
 }
