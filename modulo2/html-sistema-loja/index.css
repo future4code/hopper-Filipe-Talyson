@@ -1,0 +1,159 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+#cabecalho {
+    padding: 10px;
+    background-color: #141f3641;
+}
+
+#menu a {
+    margin: 10px;
+    cursor: pointer;
+    color: white;
+    text-shadow: 1px 1px 2px #141f36;
+}
+
+#menu a:hover {
+    color: black;
+}
+
+#logo a {
+    color: orange;
+    cursor: pointer;
+    text-shadow: 2px 2px 5px black;
+}
+
+#capa {
+    height: 100vh;
+    background-image: url('img/capa.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+.fundo {
+    background-color: #2d3d547e;
+    width: 100%;
+    height: 100%;
+}
+
+.center {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.branco {
+    color: white;
+}
+
+#banner {
+    height: 100%;
+}
+
+#banner h1 {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.479);
+    position: absolute;
+    top: 50%;
+    text-shadow: 3px 3px 8px black;
+}
+
+#rodape {
+    text-align: center;
+    padding: 20px;
+    background-color: #141f36;
+}
+
+.redes-sociais img {
+    border-radius: 50%;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#conteudo {
+    padding: 20px;
+}
+
+#conteudo h2 {
+    text-align: center;
+}
+
+.estoque table {
+    margin: 20px 0;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 5px black;
+}
+
+.estoque table img {
+    margin: 10px;
+}
+
+.estoque table tr {
+    width: 19.5%;
+    padding: 20px;
+    margin: 10px 0;
+    text-align: center;
+    background-color: #ffc;
+}
+
+.estoque table tr.dif {
+    background-color: #eee;
+}
+
+form {
+    width: 350px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #ccc;
+}
+
+form input {
+    background-color: transparent;
+    font-size: 1.3em;
+    padding: 2px 5px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid orange;
+    outline: none;
+}
+
+form button {
+    background-color: orange;
+    border: none;
+    padding: 8px 10px;
+    font-size: 1.4em;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 0 0 3px black;
+}
+
+form button:hover {
+    background-color: rgba(255, 166, 0, 0.329);
+    cursor: pointer;
+}
+
+#container {
+    position: relative;
+}
+
+.produto {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+ul li {
+    padding: 20px;
+}
