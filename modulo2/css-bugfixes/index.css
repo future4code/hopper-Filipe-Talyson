@@ -93,7 +93,7 @@ div>p:first-child {
   **/
 
 #tela-comprar {
-    font-family: 'Roboto'
+    font-family: 'Roboto';
 }
 
 div:nth-child(2),
@@ -150,4 +150,9 @@ button:hover {
 
 #back-button:hover {
     background: rgb(172, 172, 172);
+}
+
+.btn-voltar {
+    margin-top: 50px;
+    text-align: center;
 }
