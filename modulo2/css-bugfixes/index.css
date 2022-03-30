@@ -94,6 +94,11 @@ div:last-child {
     text-align: center;
 }
 
+input {
+    border: none;
+    border-bottom: 2px solid;
+}
+
 table {
     width: 60%;
     text-align: center;
