@@ -103,11 +103,13 @@ div:last-child {
 input {
     border: none;
     border-bottom: 2px solid;
+    outline: none;
 }
 
 table {
     width: 60%;
     text-align: center;
+    margin: 0 auto;
 }
 
 td button {
