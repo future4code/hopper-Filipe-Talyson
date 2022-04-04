@@ -11,7 +11,9 @@
     <div id="container">
         <div id="header">
             <div class="center">
+
                 <div id="menu">
+                    
                     <div id="perfil">
                         <div class="logo">
                             <img src="img/perfil.jpeg" alt="perfil">
@@ -21,38 +23,152 @@
                             <h1>Filipe Vidal</h1>
                         </div>
                     </div>
-                    <div id="redes-sociais">
-                        <a href=""><img src="img/instagram.png" alt="instagram"></a>
-                        <a href=""><img src="img/facebook.png" alt="facebook"></a>
-                        <a href=""><img src="img/linkedin.png" alt="linkedin"></a>
-                        <a href=""><img src="img/github.png" alt="github"></a>
+
+                    <div id="menu-itens">
+                        <a href="#">Home</a>
+                        <a href="#habilidades">Habilidades</a>
+                        <a href="#projetos">Projetos</a>
+                        <a href="#formulario">Contato</a>
                     </div>
                 </div>
             </div>
         </div><!--fim do header-->
 
         <div id="apresentacao">
-            <div class="center">
-                <div class="conteudos">
-                    <p>
-                        Olá!! Eu sou Filipe, também conhecido como Lipe Vidal, tenho 25 anos e sou apaixonado por tecnologia!!
-                    </p>
+            <div class="fundo">
+                <div class="center alinhar">
+                    <div class="conteudos">
+                        <p>
+                            Olá!! Eu sou Filipe, também conhecido como Lipe Vidal, tenho 25 anos e sou apaixonado por tecnologia!!
+                        </p>
 
-                    <p>
-                        Moro na cidade de Itabira em Minas Gerais, porém não como pão de queijo todos os dias. Gosto de viajar, pedalar e escrever 'uns códigos'  
-                    </p>
+                        <p>
+                            Moro na cidade de Itabira em Minas Gerais, e gosto de viajar, pedalar e escrever 'uns códigos'  
+                        </p>
 
-                    <p>
-                        Atualmente estou fazendo um curso de Web Full Stack na Labenu para aprimorar ainda mais meus conhecimentos com tecnologia. Lá estou aprendendo a me tornar um programador profissional. Até o momento já consegui desenvolver vários projetos usando HTML e CSS.
-                    </p>
+                        <p>
+                            Atualmente estou fazendo um curso de Web Full Stack na Labenu para aprimorar ainda mais meus conhecimentos com tecnologia. Lá estou aprendendo a me tornar um programador profissional. Até o momento já consegui desenvolver alguns projetos usando HTML e CSS. 
+                        </p>
 
-                    <p>
-                        Seja bem vindo ao meu portfólio me conheça e visualize o que eu já desenvolvi até então..
-                    </p>
+                        <p>
+                            Navegue neste portfólio e conheça meus projetos e minhas habilidades!!
+                        </p>
+                    </div>
                 </div>
-
             </div>
-        </div>
+        </div><!--fim apresentação-->
+
+        <div id="habilidades">
+            <div class="center">
+                <div class="info">
+                    <div id="tecnicas">
+                        <h2>HABILIDADES<br>TÉCNICAS</h2>
+                        <div class="box">
+                            <div class="caixa-box">
+                                <img src="img/html.png" alt="html">
+                            </div>
+
+                            <div class="caixa-box">
+                                <img src="img/css.png" alt="html">
+                            </div>
+
+                            <div class="caixa-box">
+                                <img src="img/javascript.png" alt="html">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div><!--fim habilidades-->
+
+        <div id="projetos">
+            <div class="center">
+                    <div class="box-projeto">
+                        <h2>PROJETOS</h2>
+
+                        <div id="todas-caixas">
+
+                            <div class="caixa-projeto">
+                                <a href="https://lipevidal.github.io/toplar/">
+                                    <h3>TopLar</h3>
+                                    <img src="img/toplar.png" alt="toplar">
+                                    <div class="descricao">
+                                        <p>
+                                            Projeto desenvolvido usando HTML e CSS.
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="caixa-projeto">
+                                <a href="https://lipevidal.github.io/Vidaltec/">
+                                    <h3>Vidaltec</h3>
+                                    <img src="img/vidaltec.png" alt="toplar">
+                                    <div class="descricao">
+                                        <p>
+                                            Projeto desenvolvido usando HTML, CSS<br> e javascript.
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="caixa-projeto">
+                                <a href="https://lipevidal.github.io/Calculadora/">
+                                    <h3>Calculadora</h3>
+                                    <img src="img/calculadora.png" alt="toplar">
+                                    <div class="descricao">
+                                        <p>
+                                            Projeto desenvolvido usando HTML, CSS<br> e Javascript.
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+               
+            </div>
+        </div><!--fim projetos-->
+
+        <div id="formulario">
+            <div class="center">
+                <h2>ENTRE EM CONTATO</h2>
+                <form action="">
+
+                    <div class="campos">
+                        <label for="nome">Nome</label><br>
+                        <input type="text" id="nome" autocomplete="off">
+                    </div>
+                    
+                    <div class="campos">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" autocomplete="off">
+                    </div>
+
+                    <div class="campos">
+                        <label for="text">Mensagem</label>
+                        <textarea name="" id="text" cols="30" rows="10" autocomplete="off"></textarea>
+                    </div>
+
+                    <input type="submit" value="Enviar" class="botao">
+                </form>
+            </div>
+        </div><!--fim formulario-->
+
+        <footer>
+            <div id="redes-sociais">
+                <a href=""><img src="img/instagram.png" alt="instagram"></a>
+                <a href=""><img src="img/facebook.png" alt="facebook"></a>
+                <a href=""><img src="img/linkedin.png" alt="linkedin"></a>
+                <a href=""><img src="img/github.png" alt="github"></a>
+            </div>
+            <div id="finalizacao">
+                <p>
+                    Desenvolvido por <span>Filipe Vidal</span>
+                </p>
+            </div>
+        </footer>
     </div>
 </body>
 </html>

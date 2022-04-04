@@ -17,17 +17,49 @@ body {
     position: relative;
 }
 
+.fundo {
+    height: 100%;
+    background-color: #2d3d54ca;
+    padding-bottom: 40px;
+    box-shadow: 0 2px 5px black;
+}
+
+.alinhar {
+    display: flex;
+    justify-content: center;
+}
+
 /*------header-----------*/
 #header {
     width: 100%;
-    height: 100px;
+    height: 120px;
     background-color: #141f36;
     box-shadow: 0px 0px 5px black;
+    z-index: 100;
+    margin-bottom: 3px;
+    position: fixed;
+    top: 0;
 }
 
 #menu {
     display: flex;
     justify-content: space-between;
+}
+
+#menu-itens {
+    display: flex;
+    justify-content: right;
+    padding: 0 10px;
+}
+
+#menu-itens a {
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+#menu-itens a:hover {
+    color:#2d6cea;
 }
 
 #redes-sociais img{
@@ -37,14 +69,14 @@ body {
 }
 
 .logo img{
-    min-width: 150px;
-    max-width: 150px;
-    min-height: 150px;
-    max-height: 150px;
+    min-width: 130px;
+    max-width: 130px;
+    min-height: 130px;
+    max-height: 130px;
     object-fit: cover;
     border-radius: 50%;
     position: absolute;
-    top: 30%;
+    top: 100%;
     box-shadow: 0px 0px 5px black;
     cursor: pointer;
 }
@@ -56,8 +88,8 @@ body {
 
 .nome-perfil {
     position: absolute;
-    left: 167px;
-    top: 58px;
+    left: 150px;
+    top: 80px;
     clear: both;
     color: white;
     font-family: 'Roboto';
@@ -71,17 +103,29 @@ body {
 
 /*-------Apresentação-----------*/
 #apresentacao {
-    height: 300px;
+    width: 100%;
+    background-image: url('img/capa.jpg');
+    background-size: cover;
+    margin-top: 120px;
 }
 
 .conteudos {
     width: 90%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: blue;
+    background-color: rgba(0, 0, 0, 0.726);
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 100px;
+}
+
+.conteudos::after {
+    content: " ";
+    position: absolute;
+    top: 40px;  /* At the top of the tooltip */
+    left: 13%;
+    margin-left: -5px;
+    border-width: 30px;
+    border-style: solid;
+    border-color: transparent transparent rgba(0, 0, 0, 0.726) transparent;
 }
 
 #apresentacao p{
@@ -89,4 +133,158 @@ body {
     font-size: 1.2em;
     letter-spacing: 3px;
     text-shadow: 0px 0px 8px black;
+    margin: 20px;
+    text-align: justify;
+}
+
+/*----------habilidades------------*/
+#habilidades {
+    padding: 20px 0;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#tecnicas, #comportamental {
+    text-align: center;
+    color: white;
+    display: inline-block;
+    padding: 15px;
+    margin: 20px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 3px black;
+    box-shadow: 0 0 3px black;
+    border-radius: 10px;
+    background-color: #2d6cea;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.caixa-box {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 5px black;
+}
+
+.caixa-box img {
+    width: 100px;
+    height: 100px;
+}
+
+/*---------Projetos------------*/
+#projetos {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 0 3px black;
+}
+
+#projetos img {
+    width: 300px;
+    object-fit: cover;
+    margin: 5px 0;
+}
+
+#projetos a{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    word-wrap:break-word;
+}
+
+
+#todas-caixas{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.caixa-projeto {
+    margin: 20px;
+    box-shadow: 0 0 3px #ccc;
+}
+
+/*-----------formulario----------*/
+#formulario {
+    text-align: center;
+    color: white;
+}
+
+#formulario h2 {
+    margin-bottom: 20px;
+}
+
+.campos {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.campos input, #formulario textarea{
+    background-color: transparent;
+    padding: 5px 10px;
+    margin: 10px 0;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1.3em;
+    outline: none;
+    width: 100%;
+} 
+
+form {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#formulario input:focus, #formulario textarea:focus {
+    border: 1px solid #2d6cea;
+}
+
+.botao {
+    padding: 8px 20px;
+    color: white;
+    background-color: #369a5d;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: #369a5c97;
+}
+
+/*---------Footer-------*/
+
+footer {
+    text-align: center;
+}
+
+#redes-sociais {
+    background-color: white;
+    padding: 20px 0;
+}
+
+#finalizacao {
+    padding: 20px 0;
+    color: white;
+    font-size: 1.1em;
+    letter-spacing: 2px;
+}
+
+#finalizacao span {
+    color: orange;
 }
