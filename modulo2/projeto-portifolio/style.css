@@ -35,37 +35,32 @@ body {
     height: 120px;
     background-color: #141f36;
     box-shadow: 0px 0px 5px black;
-    z-index: 100;
     margin-bottom: 3px;
-    position: fixed;
-    top: 0;
-}
-
-#menu {
-    display: flex;
-    justify-content: space-between;
 }
 
 #menu-itens {
+    width: 100%;
+    background-color: #141f36;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+}
+
+.links {
     display: flex;
     justify-content: right;
-    padding: 0 10px;
 }
 
 #menu-itens a {
     padding: 15px;
     text-decoration: none;
     color: white;
+    letter-spacing: 1px;
 }
 
 #menu-itens a:hover {
-    color:#2d6cea;
-}
-
-#redes-sociais img{
-    width: 30px;
-    height: 30px;
-    margin: 15px 10px 0 10px;
+    color:orange;
 }
 
 .logo img{
@@ -76,25 +71,21 @@ body {
     object-fit: cover;
     border-radius: 50%;
     position: absolute;
-    top: 100%;
+    top: 50px;
     box-shadow: 0px 0px 5px black;
     cursor: pointer;
 }
 
-#perfil {
-    display: flex;
-    align-items: center;
-}
-
 .nome-perfil {
+    display: flex;
     position: absolute;
     left: 150px;
     top: 80px;
-    clear: both;
     color: white;
     font-family: 'Roboto';
     letter-spacing: 2px;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .clearfix {
@@ -106,12 +97,37 @@ body {
     width: 100%;
     background-image: url('img/capa.jpg');
     background-size: cover;
-    margin-top: 120px;
+}
+
+#tema {
+    background-color: #369a5cb9;
+    padding: 20px;
+    color: white;
+    font-weight: 300;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 550px;
+    font-size: 1.3em;
+    font-family: 'Roboto';
+    letter-spacing: 2px;
+    margin: 80px 0;
+    border-spacing: 5px;
+    border: 3px solid #369a5cb9;
+    cursor: pointer;
+}
+
+#tema p {
+    text-align: center;
+}
+
+#tema span {
+    color: orange;
+    white-space: nowrap;
 }
 
 .conteudos {
     width: 90%;
-    background-color: rgba(0, 0, 0, 0.726);
+    background-color: #369a5d;
     border-radius: 20px;
     padding: 10px;
     margin-top: 100px;
@@ -125,19 +141,98 @@ body {
     margin-left: -5px;
     border-width: 30px;
     border-style: solid;
-    border-color: transparent transparent rgba(0, 0, 0, 0.726) transparent;
+    border-color: transparent transparent #369a5d transparent;
 }
 
 #apresentacao p{
     color: #ececf6;
     font-size: 1.2em;
     letter-spacing: 3px;
-    text-shadow: 0px 0px 8px black;
     margin: 20px;
     text-align: justify;
 }
 
+/*--------sobre-mim---------*/
+#sobre-mim {
+    background-color: white;
+    font-family: 'Roboto';
+    letter-spacing: 2px;
+    padding: 20px;
+    margin-bottom: -10px;
+}
+
+#sobre-mim p {
+    font-weight: 800;
+    margin: 20px 5px;
+    text-align: justify;
+}
+
+#sobre-mim span {
+    color: #369a5d;
+    font-weight: 900;
+}
+
 /*----------habilidades------------*/
+#habilidades {
+    font-family: 'Roboto';
+    letter-spacing: 2px;
+    color: white;
+    text-align: center;
+    padding: 20px 5px;
+}
+
+.caixa-habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.minha-habilidade {
+    margin: 15px;
+    padding: 10px;
+}
+
+.minha-habilidade i{
+    font-size: 4em;
+}
+
+.minha-habilidade .fa-html5{
+    color: #E96228;
+}
+
+.minha-habilidade .fa-css3-alt{
+    color: #1B7EC1;
+}
+
+.minha-habilidade .fa-js{
+    color: #FFD730;
+}
+
+.minha-habilidade .fa-vuejs{
+    color: #3FB984;
+}
+
+.minha-habilidade .fa-sass{
+    color: #CE679A;
+}
+
+.minha-habilidade .fa-bootstrap{
+    color: #7811F2;
+}
+
+.minha-habilidade .fa-node{
+    color: #59A842;
+}
+
+.minha-habilidade .fa-php{
+    color: #7377AD;
+}
+
+.minha-habilidade .fa-laravel{
+    color: #F72C1F;
+}
+
+/*
 #habilidades {
     padding: 20px 0;
 }
@@ -179,14 +274,19 @@ body {
     width: 100px;
     height: 100px;
 }
-
+*/
 /*---------Projetos------------*/
 #projetos {
-    margin: 30px 0;
+    margin-top: 30px;
     padding: 20px;
     background-color: white;
     text-align: center;
     box-shadow: 0 0 3px black;
+}
+
+#projetos h1, #projetos h3 {
+    font-family: 'Roboto';
+    letter-spacing: 2px;
 }
 
 #projetos img {
@@ -220,10 +320,13 @@ body {
 #formulario {
     text-align: center;
     color: white;
+    padding: 20px 0;
 }
 
-#formulario h2 {
+#formulario h1 {
     margin-bottom: 20px;
+    font-family: 'Roboto';
+    letter-spacing: 2px;
 }
 
 .campos {
@@ -278,6 +381,15 @@ footer {
     padding: 20px 0;
 }
 
+#redes-sociais a {
+    color: #141f36;
+}
+
+#redes-sociais i{
+    font-size: 50px;
+    margin: 15px;
+}
+
 #finalizacao {
     padding: 20px 0;
     color: white;
@@ -287,4 +399,20 @@ footer {
 
 #finalizacao span {
     color: orange;
+}
+
+/*--------------*/
+#p1 {
+    padding: 20px;
+    background-color: white;
+}
+
+#p2 {
+    padding: 10px;
+    background-color: transparent;
+}
+
+#p3 {
+    padding: 20px;
+    background-color: white;
 }
