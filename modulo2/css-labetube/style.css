@@ -44,6 +44,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: 70px;
 }
 
 #caixas h2 {
