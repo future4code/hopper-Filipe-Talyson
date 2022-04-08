@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.center {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/*-------header--------*/
+header {
+    background-color: #369a5d;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5%;
+}
+
+h1 {
+    font-family: 'Roboto';
+    color: white;
+}
+
+#pesquisa {
+    width: 300px;
+}
+
+#pesquisa input {
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 5px;
+    width: 100%;
+}
+/*-------------main--------------------*/
+
+#caixas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 70px;
+}
+
+#caixas h2 {
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.caixa-video {
+    margin:10px;
+    box-shadow: 0 0 2px #369a5d;
+}
+
+.caixa-video a {
+    text-decoration: none;
+    color: black
+}
+
+.caixa-video img.img-principal {
+    max-width: 250px;
+    max-height: 150px;
+    min-width: 250px;
+    min-height: 150px;
+    object-fit: cover;
+}
+
+.caixa-video .icones img {
+    width: 15px;
+    height: 15px;
+    margin-top: 8px;
+    margin-right: 5px;
+    transition: all 0.1s;
+    cursor: pointer;
+}
+
+.titulo {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.i-descricao {
+    display: inline;
+}
+
+.i-descricao span{
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 5px;
+    color: white;
+    background-color: black;
+    padding: 2px;
+    border-radius: 3px;
+}
+
+.caixa-video .icones img:hover {
+    width: 18px;
+    height: 18px;
+}
+
+.caixa-video .icones img:hover  + span {
+    display: inline;
+}
+
+/*----------video-------------*/
+#video h1 {
+    color: black;
+    font-family: 'Roboto';
+    text-align: center;
+    margin: 20px;
+}
+
+#container-video {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px;
+    padding-bottom: 36.5%;
+}
+
+#container-video > video {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+/*---------footer----------*/
+footer {
+    background-color: #369a5d;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 1.2em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
