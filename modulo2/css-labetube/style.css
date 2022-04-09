@@ -120,18 +120,22 @@ h1 {
 #container-video {
     max-width: 800px;
     margin: 0 auto;
-    position: relative;
+    /*position: relative;
     padding: 20px;
-    padding-bottom: 36.5%;
+    padding-bottom: 36.5%;*/
 }
 
-#container-video > video {
+#container-video video {
+    width: 100%;
+}
+
+/*#container-video > video {
     position: absolute;
     top: 5%;
     left: 5%;
     width: 90%;
     height: 90%;
-}
+}*/
 
 /*---------footer----------*/
 footer {
@@ -143,4 +147,10 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+    #pesquisa {
+        width: 35%;
+    }
 }
