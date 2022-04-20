@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2d3d54;
+}
+
+.center {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 8px;
+    position: relative;
+}
+
+.fundo {
+    height: 100%;
+    background-color: #2d3d54ca;
+    padding-bottom: 40px;
+    box-shadow: 0 2px 5px black;
+}
+
+.alinhar {
+    display: flex;
+    justify-content: center;
+}
+
+/*------header-----------*/
+#header {
+    width: 100%;
+    height: 120px;
+    background-color: #141f36;
+    box-shadow: 0px 0px 5px black;
+    margin-bottom: 3px;
+}
+
+#menu-itens {
+    width: 100%;
+    background-color: #141f36;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+}
+
+.links {
+    display: flex;
+    justify-content: right;
+}
+
+#menu-itens a {
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 1px;
+}
+
+#menu-itens a:hover {
+    color:orange;
+}
+
+.logo img{
+    min-width: 130px;
+    max-width: 130px;
+    min-height: 130px;
+    max-height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    box-shadow: 0px 0px 5px black;
+    cursor: pointer;
+}
+
+.nome-perfil {
+    display: flex;
+    position: absolute;
+    left: 150px;
+    top: 80px;
+    color: white;
+    font-family: 'Roboto';
+    letter-spacing: 2px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.clearfix {
+    clear: both;
+}
+
+/*-------Apresentação-----------*/
+#apresentacao {
+    width: 100%;
+    background-image: url('img/capa.jpg');
+    background-size: cover;
+}
+
+#tema {
+    background-color: #369a5cb9;
+    padding: 20px;
+    color: white;
+    font-weight: 300;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 550px;
+    font-size: 1.3em;
+    font-family: 'Roboto';
+    letter-spacing: 2px;
+    margin: 80px 0;
+    border-spacing: 5px;
+    border: 3px solid #369a5cb9;
+    cursor: pointer;
+}
+
+#tema p {
+    text-align: center;
+}
+
+#tema span {
+    color: orange;
+    white-space: nowrap;
+}
+
+.conteudos {
+    width: 90%;
+    background-color: #369a5d;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 100px;
+}
+
+.conteudos::after {
+    content: " ";
+    position: absolute;
+    top: 40px;  /* At the top of the tooltip */
+    left: 13%;
+    margin-left: -5px;
+    border-width: 30px;
+    border-style: solid;
+    border-color: transparent transparent #369a5d transparent;
+}
+
+#apresentacao p{
+    color: #ececf6;
+    font-size: 1.2em;
+    letter-spacing: 3px;
+    margin: 20px;
+    text-align: justify;
+}
+
+/*--------sobre-mim---------*/
+#sobre-mim {
+    background-color: white;
+    font-family: 'Roboto';
+    letter-spacing: 2px;
+    padding: 20px;
+    margin-bottom: -10px;
+}
+
+#sobre-mim p {
+    font-weight: 800;
+    margin: 20px 5px;
+    text-align: justify;
+}
+
+#sobre-mim span {
+    color: #369a5d;
+    font-weight: 900;
+}
+
+/*----------habilidades------------*/
+#habilidades {
+    font-family: 'Roboto';
+    letter-spacing: 2px;
+    color: white;
+    text-align: center;
+    padding: 20px 5px;
+}
+
+.caixa-habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.minha-habilidade {
+    margin: 15px;
+    padding: 10px;
+}
+
+.minha-habilidade i{
+    font-size: 4em;
+}
+
+.minha-habilidade .fa-html5{
+    color: #E96228;
+}
+
+.minha-habilidade .fa-css3-alt{
+    color: #1B7EC1;
+}
+
+.minha-habilidade .fa-js{
+    color: #FFD730;
+}
+
+.minha-habilidade .fa-vuejs{
+    color: #3FB984;
+}
+
+.minha-habilidade .fa-sass{
+    color: #CE679A;
+}
+
+.minha-habilidade .fa-bootstrap{
+    color: #7811F2;
+}
+
+.minha-habilidade .fa-node{
+    color: #59A842;
+}
+
+.minha-habilidade .fa-php{
+    color: #7377AD;
+}
+
+.minha-habilidade .fa-laravel{
+    color: #F72C1F;
+}
+
+/*
+#habilidades {
+    padding: 20px 0;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#tecnicas, #comportamental {
+    text-align: center;
+    color: white;
+    display: inline-block;
+    padding: 15px;
+    margin: 20px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 3px black;
+    box-shadow: 0 0 3px black;
+    border-radius: 10px;
+    background-color: #2d6cea;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.caixa-box {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 5px black;
+}
+
+.caixa-box img {
+    width: 100px;
+    height: 100px;
+}
+*/
+/*---------Projetos------------*/
+#projetos {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 0 3px black;
+}
+
+#projetos h1, #projetos h3 {
+    font-family: 'Roboto';
+    letter-spacing: 2px;
+}
+
+#projetos img {
+    width: 300px;
+    object-fit: cover;
+    margin: 5px 0;
+}
+
+#projetos a{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    word-wrap:break-word;
+}
+
+
+#todas-caixas{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.caixa-projeto {
+    margin: 20px;
+    box-shadow: 0 0 3px #ccc;
+}
+
+/*-----------formulario----------*/
+#formulario {
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+}
+
+#formulario h1 {
+    margin-bottom: 20px;
+    font-family: 'Roboto';
+    letter-spacing: 2px;
+}
+
+.campos {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.campos input, #formulario textarea{
+    background-color: transparent;
+    padding: 5px 10px;
+    margin: 10px 0;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1.3em;
+    outline: none;
+    width: 100%;
+} 
+
+form {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#formulario input:focus, #formulario textarea:focus {
+    border: 1px solid #2d6cea;
+}
+
+.botao {
+    padding: 8px 20px;
+    color: white;
+    background-color: #369a5d;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: #369a5c97;
+}
+
+/*---------Footer-------*/
+
+footer {
+    text-align: center;
+}
+
+#redes-sociais {
+    background-color: white;
+    padding: 20px 0;
+}
+
+#redes-sociais a {
+    color: #141f36;
+}
+
+#redes-sociais i{
+    font-size: 50px;
+    margin: 15px;
+}
+
+#finalizacao {
+    padding: 20px 0;
+    color: white;
+    font-size: 1.1em;
+    letter-spacing: 2px;
+}
+
+#finalizacao span {
+    color: orange;
+}
+
+/*--------------*/
+#p1 {
+    padding: 20px;
+    background-color: white;
+}
+
+#p2 {
+    padding: 10px;
+    background-color: transparent;
+}
+
+#p3 {
+    padding: 20px;
+    background-color: white;
+}
