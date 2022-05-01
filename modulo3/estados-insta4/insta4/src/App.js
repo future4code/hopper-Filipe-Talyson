@@ -2,17 +2,28 @@ import React from 'react';
 import styled from 'styled-components'
 import Post from './components/Post/Post';
 
-const Formulario = styled.form`
+const Formulario = styled.div`
   max-width: 300px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
+  text-align: center;
   input {
     background-color: transparent;
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 5px;
     margin: 8px;
+  }
+  button {
+    background-color: lightgreen;
+    border: none;
+    padding: 8px;
+    width:100px;
+    margin: 0 auto;
+    color: white;
+    border-radius: 10px;
   }
 `
 
@@ -61,8 +72,10 @@ class App extends React.Component {
       fotoPost: this.state.adicionaFotoPost
     }
     const novoPost = [...this.state.post, postagem]
-    this.setState({post: novoPost})
+    this.setState({post: novoPost, adicionaUsuario: '', adicionaFotoUsuario: '', adicionaFotoPost: ''})   
   }
+
+  
 
   render() {
     const listaDePosts = this.state.post.map((post) => {
@@ -74,10 +87,12 @@ class App extends React.Component {
         />
       )
     })
+    console.log(this.state.post) 
 
     return (
       <>
         <Formulario>
+          <h2>Novo Post</h2>
           <input  
             placeholder='Nome' 
             value={this.state.adicionaUsuario} 
@@ -85,13 +100,13 @@ class App extends React.Component {
           />
 
           <input 
-            placeholder='Foto do Usuario' 
+            placeholder='URL da foto do Usuario' 
             value={this.state.adicionaFotoUsuario} 
             onChange={this.OnchangeInputFotoUsuario}
           />
 
           <input 
-            placeholder='Post' 
+            placeholder='URL da foto do post' 
             value={this.state.adicionaFotoPost} 
             onChange={this.OnchangeInputFotoPost}
           />
