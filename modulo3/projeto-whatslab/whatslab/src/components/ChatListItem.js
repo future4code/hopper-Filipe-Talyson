@@ -8,6 +8,9 @@ const ChatListItem = styled.div`
   &:hover {
     background-color: #f5f5f5;
   }
+  &.active {
+    background-color: #ebebeb;
+  }
   cursor: pointer;
   align-items: center;
   height: 70px;
@@ -57,14 +60,16 @@ const ChatListItem = styled.div`
   }
 `
 // eslint-disable-next-line import/no-anonymous-default-export
-export default () => {
+export default ({onClick, active, data}) => {
     return (
-        <ChatListItem>
-            <img className='chatListItem-avatar' src='https://www.w3schools.com/howto/img_avatar.png'/>
+        <ChatListItem 
+          onClick={onClick} 
+          className={`${active ? 'active': ''}`} >
+            <img className='chatListItem-avatar' src={data.image}/>
             <div className='chatListItem-lines'>
                 <div className='chatListItem-line'>
                     <div className='chatListItem-name'>
-                      Aline Santos
+                      {data.title}
                     </div>
                     <div className='chatListItem-date'>
                       19:00

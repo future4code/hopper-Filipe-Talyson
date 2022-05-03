@@ -3,6 +3,8 @@ import React, {useState, useEffect} from 'react';
 import styled from 'styled-components'
 import './App.css'
 import ChatListItem from './components/ChatListItem';
+import ChatIntro from './components/ChatIntro';
+import ChatWindow from './components/ChatWindow';
 // import DonutLargeIcon from '@mui/icons-material/DonutLarge';
 // import ChatIcon from '@mui/icons-material/Chat';
 // import MoreVertIcon from '@mui/icons-material/MoreVert';
@@ -76,14 +78,37 @@ const AppWindow = styled.div`
     }
   }
   .contentarea{
-
+    flex: 1;
   }
 `
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default () => {
 
-  const [chatlist, setChatList] = useState([{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]);
+  const [chatlist, setChatList] = useState([
+    {
+      chatId: 1, 
+      title: 'Joana', 
+      image: 'https://img.elo7.com.br/product/main/3E26D20/desenho-personalizado-para-perfil-desenho-personalizado.jpg'
+    },
+    {
+      chatId: 2, 
+      title: 'Aline', 
+      image: 'https://img.elo7.com.br/product/main/3E26D20/desenho-personalizado-para-perfil-desenho-personalizado.jpg'
+    },
+    {
+      chatId: 3, 
+      title: 'Pedro', 
+      image: 'https://img.elo7.com.br/product/main/3E26D20/desenho-personalizado-para-perfil-desenho-personalizado.jpg'
+    },
+    {
+      chatId: 4, 
+      title: 'Henrique', 
+      image: 'https://img.elo7.com.br/product/main/3E26D20/desenho-personalizado-para-perfil-desenho-personalizado.jpg'
+    }
+  ]);
+
+  const [activeChat, setActiveChat] = useState({});
 
   return (
     <AppWindow>
@@ -120,6 +145,9 @@ export default () => {
           {chatlist.map((item, key) => (
             <ChatListItem
               key={key}
+              data={item}
+              active={activeChat.chatId === chatlist[key].chatId}
+              onClick={()=>setActiveChat(chatlist[key])}
             />
           ))}
         </div>
@@ -127,7 +155,8 @@ export default () => {
       </div>
 
       <div className='contentarea'>
-        ...
+        {activeChat.chatId !== undefined && <ChatWindow />}
+        {activeChat.chatId === undefined && <ChatIntro />}
       </div>
     </AppWindow>
   )
