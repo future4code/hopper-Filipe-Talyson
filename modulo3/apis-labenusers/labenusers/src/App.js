@@ -6,14 +6,17 @@ import './App.css';
 export default class App extends React.Component {
 
   state = {
-    pages: ''
+    pages: true
+  }
+
+  changePage = () => {
+    this.setState({pages: false})
   }
   
   render() {
     return (
       <div>
-        <FormUser />
-        <ListUsers />
+        {this.state.pages ? <FormUser onclickButton={this.changePage}/> : <ListUsers />}
       </div>
     )
   }

@@ -25,18 +25,19 @@ export default class ListUsers extends React.Component {
     }
 
     deleteUser = (id) => {
-        axios.delete(`https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${id}`, {
-            headers: {
-                Authorization: 'filipe-talyson-hopper'
-            }
-        }).then((res) => {
-            if(alert('Tem certeza que deseja excluir este usuário?')) {
+        // eslint-disable-next-line no-restricted-globals
+        if(confirm('Tem certeza que deseja excluir este usuário?')) {
+            axios.delete(`https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${id}`, {
+                headers: {
+                    Authorization: 'filipe-talyson-hopper'
+                }
+            }).then((res) => {
                 this.Users()
                 alert('Usuário deletado com sucesso')
-            }
-        }).catch((err) => {
-            console.log(err)
-        })
+            }).catch((err) => {
+                console.log(err)
+            })  
+        }
     }
 
     render() {

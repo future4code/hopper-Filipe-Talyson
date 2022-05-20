@@ -24,7 +24,8 @@ const Form = styled.div`
 export default class ListUsers extends React.Component {
     state = {
         inputName: '',
-        inputEmail: ''
+        inputEmail: '',
+        pages: false
     }
 
     onChangeInputName = (event) => {
@@ -51,6 +52,10 @@ export default class ListUsers extends React.Component {
           alert('Erro ao criar usuário')
         })
     }
+    
+    changePage = () => {
+        this.setState({pages: false})
+    }
 
     render() {
 
@@ -60,6 +65,7 @@ export default class ListUsers extends React.Component {
                 <input value={this.state.inputName} onChange={this.onChangeInputName} placeholder='Nome' />
                 <input value={this.state.inputEmail} onChange={this.onChangeInputEmail} placeholder='Email' />
                 <button onClick={this.createUsers}>Criar Usuário</button>
+                <button onClick={this.props.onclickButton}>Ver Usuários</button>
             </Form>
         )
     }
