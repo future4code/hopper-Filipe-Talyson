@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import styled from 'styled-components'
+import FormCriarPlaylist from './FormCriarPlaylist';
 
 const Container = styled.div`
     display: flex;
@@ -8,29 +9,64 @@ const Container = styled.div`
         padding: 15px;
         width: 400px;
         text-align: center;
-        border: 1px solid black;
-        button {
-            background-color: #369a5d;
-            padding: 5px 10px;
-            border-radius: 10px;
-            box-shadow: 2px 2px 8px black;
+        background-color: orange;
+        margin: 10px;
+        border-radius: 15px;
+        h3 {
+            color: #ececf6;
+        }
+        .inputButton {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            button {
+                background-color: #369a5d;
+                color: white;
+                padding: 5px 10px;
+                border-radius: 10px;
+            }
         }
     }
     .listPlaylist {
         width: 400px;
+        margin: 10px;
+        border-radius: 15px;
+        background-color: #141f36;
+        color: black;
         text-align: center;
-        border: 1px solid black;
         padding: 15px;
         h4 {
             margin-bottom: 20px;
+            color: #ececf6;
+        }
+        .itensListPlaylist {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            p {
+                background-color: #2d3d54;
+                margin: 5px;
+                border-radius: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                button {
+                    color: #ececf6;
+                }
+                button.excluir {
+                    background-color: #df484a;
+                    padding: 5px;
+                    margin: 5px;
+                    border-radius: 5px;
+                }
+            }
         }
     }
     .listMusic {
-
     }
+
     input {
         width: 200px;
-        background-color: #2d3d54;
         border: none;
         padding: 5px 10px;
         border-radius: 10px;
@@ -45,7 +81,9 @@ export default class Playlist extends React.Component {
         inputNome: "",
         nomeMusica: '',
         nomeArtista: '',
-        linkMusica: ''
+        linkMusica: '',
+        playlist: {},
+        nomePlaylist: ''
     }
 
     componentDidMount() {
@@ -64,31 +102,32 @@ export default class Playlist extends React.Component {
         })
     }
 
-    musica = (id) => {
-        axios.get(`https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${id}/tracks`, {
+    musica = (playlist) => {
+        axios.get(`https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${playlist.id}/tracks`, {
             headers: {
                 Authorization: "filipe-talyson-hopper"
             }
         }).then((res) => {
             console.log(res)
-            this.setState({musicasPlaylist: res.data.result.tracks})
+            this.setState({musicasPlaylist: res.data.result.tracks, playlist: playlist, nomePlaylist: playlist.name})
         }).catch((err) => {
             console.log(err)
         })
     }
 
-    criarMusica = (id) => {
+    criarMusica = (playlist) => {
         const body = {
             name: this.state.nomeMusica, 
             artist: this.state.nomeArtista,
             url: this.state.linkMusica
         }
-        axios.get(`https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${id}/tracks`, body, {
+        axios.post(`https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${playlist.id}/tracks`, body, {
             headers: {
                 Authorization: "filipe-talyson-hopper"
             }
         }).then(() => {
             alert('Música criada com sucesso')
+            this.musica(playlist)
         }).catch(() => {
             alert('Erro ao criar musica')
         })        
@@ -106,6 +145,7 @@ export default class Playlist extends React.Component {
     onchangeLinkMusica = (event) => {
         this.setState({ linkMusica: event.target.value })
     }
+    
     criarNomePlaylist = () => {
         const body = {
             name: this.state.inputNome
@@ -117,6 +157,7 @@ export default class Playlist extends React.Component {
             }
         }).then(() => {
             alert('Playlist criada com sucesso')
+            this.setState({nomePlaylist: this.state.inputNome})
             this.todasPlaylists()
         }).catch(() =>{
             alert('Ocorreu um erro ao criar sua playlist')
@@ -125,15 +166,7 @@ export default class Playlist extends React.Component {
   render() {
     const listPlaylist = this.state.nomesPlaylist.map((playlist) => {
         return (
-            <>
-                <p><button onClick={() => this.musica(playlist.id)}>{playlist.name}</button><button>X</button></p>
-
-                <h4>Adicionar músicas a esta playlist</h4>
-                <input placeholder="Nome da música" value={this.state.nomeMusica} onChange={this.onchangeNomeMusica}/>
-                <input placeholder="Nome do artista ou banda" value={this.state.nomeArtista} onChange={this.onchangeNomeArtista}/>
-                <input placeholder="Link da música" value={this.state.linkMusica} onChange={this.onchangeLinkMusica}/>
-                <button onClick={() => this.criarMusica(playlist.id)}>Criar</button>
-            </>
+            <p><button onClick={() => this.musica(playlist)}>{playlist.name}</button><button className='excluir'>X</button></p>
         )
     })
     
@@ -145,19 +178,31 @@ export default class Playlist extends React.Component {
       <Container>
         <div>
             <div className='criarPlaylist'>
-                <h3>Crie uma playlist</h3>
-                <input placeholder="Nome da sua playlist" value={this.state.inputNome} onChange={this.onchangeNomePlaylist}/>
-                <button onClick={this.criarNomePlaylist}>Salvar</button>
+                <h3>CRIE UMA PLAYLIST</h3>
+                <div className='inputButton'>
+                    <input placeholder="Nome da playlist" value={this.state.inputNome} onChange={this.onchangeNomePlaylist} autoComplete="none"/>
+                    <button onClick={this.criarNomePlaylist}>Salvar</button>
+                </div>
             </div>
 
             <div className='listPlaylist'>
-                <h4>Minhas playlists</h4>
-                {listPlaylist}
+                <h4>MINHAS PLAYLISTS</h4>
+                <div className='itensListPlaylist'>
+                    {listPlaylist}
+                </div>
             </div>
         </div>
-        <div className='listMusic'>
-            {listMusicas}
-        </div>
+        {this.state.nomePlaylist ? <FormCriarPlaylist 
+                nomePlaylist={this.state.nomePlaylist}
+                valorInputNomeMusica={this.state.nomeMusica}
+                onchangeNomeMusica={this.onchangeNomeMusica}
+                valorInputNomeArtista={this.state.nomeArtista}
+                onchangeNomeArtista={this.onchangeNomeArtista}
+                valorInputLinkMusica={this.state.linkMusica}
+                onchangeLinkMusica={this.onchangeLinkMusica}
+                onclickCriarMusica={() => this.criarMusica(this.state.playlist)}
+                listaMusicas={listMusicas}
+            /> : <p>Selecione uma playlist</p>}
       </Container>
     )
   }

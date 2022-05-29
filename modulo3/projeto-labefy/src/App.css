@@ -4,23 +4,16 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #141f36;
-  color: #ececf6;
-}
-
 button {
   background-color: transparent;
   border: none;
   cursor: pointer;
   padding: 15px;
-  color: #ececf6;
 }
 
 input {
-  color: #ececf6;
+  color: black;
   outline: none;
-  box-shadow: 2px 2px 8px black;
 }
 
 .center {
